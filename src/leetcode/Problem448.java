@@ -1,4 +1,6 @@
+package leetcode;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -16,8 +18,45 @@ public class Problem448 {
         return ans;
     }
 
+
+//    将当前位置换为负数
+    public static List<Integer> findDisappearedNumbers2(int[] nums) {
+        List<Integer> ans = new ArrayList<Integer>();
+        for(int i = 0;i<nums.length;i++){
+            nums[Math.abs(nums[i])-1]=-Math.abs(nums[Math.abs(nums[i])-1]);
+        }
+        for(int i =0;i<nums.length;i++)
+        {
+            if(nums[i]>0) ans.add(i+1);
+
+        }
+        return ans;
+    }
+//
+//    置换数组元素的位置，将nums[i]换到其对应的nums[nums[i]-1]的位置上。
+    public static List<Integer> findDisappearedNumbers3(int[] nums) {
+        List<Integer> ans = new ArrayList<Integer>();
+        int temp = 0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[nums[i]-1]!=nums[i]){
+                temp=nums[i];
+                nums[i]=nums[nums[i]-1];
+                nums[nums[i]-1]=temp;
+                i--;
+            }
+        }
+        for(int i =0;i<nums.length;i++)
+        {
+            if(nums[i]!=i+1) ans.add(i+1);
+
+        }
+        return ans;
+    }
+
+
+
     public static void main(String[] args) {
         int []nums = {4,3,2,7,2,3,1,1};
-        System.out.println(findDisappearedNumbers(nums));
+        System.out.println(findDisappearedNumbers3(nums));
     }
 }
