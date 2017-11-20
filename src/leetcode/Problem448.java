@@ -1,9 +1,9 @@
 package leetcode;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
+ * find all numbers disappeared in an Array
  * Created by Diane on 2017/11/10.
  */
 public class Problem448 {

@@ -1,3 +1,4 @@
+package leetcode;
 /**
  * Created by Diane on 2017/11/10.
  */
