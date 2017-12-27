@@ -1,8 +1,5 @@
-package leetcode;
+package leetcode.array;
 
-import sun.security.util.Length;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**

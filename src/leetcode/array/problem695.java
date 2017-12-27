@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.array;
 
 import sun.font.TrueTypeFont;
 import sun.reflect.generics.tree.Tree;

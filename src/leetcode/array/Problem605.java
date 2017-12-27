@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.array;
 
 /**
  * Created by hh23485 on 2017/11/5.
