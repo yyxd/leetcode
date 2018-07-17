@@ -15,7 +15,6 @@ public class leetcode1 {
                     ans[0]=i;ans[1]=j;
                     return ans;
                 }
-
             }
         }
         return ans;
