@@ -11,25 +11,7 @@ public class Problem31_NextPermutation {
     public static void nextPermutation2(int[] nums){
         int len = nums.length;
         int c=nums[len-1],i;
-        for(i = len-2;i>=0;i--){
-            if(c<nums[i])
-                c = nums[i];
-            else
-                break;
-        }
-        if(i==0&&c==nums[i])
-            Arrays.sort(nums);
-        else {
-            for (int j=len-1;j>i;j--)
-                if(nums[j]>nums[i])
-                {
-                    int temp = nums[j];
-                    nums[j] = nums[i];
-                    nums[i] = temp;
-                    Arrays.sort(nums,i,len);
-                    break;
-                }
-        }
+
     }
 
     public static void nextPermutation(int[] nums) {

@@ -1,4 +1,4 @@
-package leetcode;
+package acwing.leetcode4;
 
 /**
  * Created by Diane on 2018/11/14.
