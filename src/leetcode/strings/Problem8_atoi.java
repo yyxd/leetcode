@@ -3,7 +3,7 @@ package leetcode.strings;
 /**
  * Created by Diane on 2019/2/8.
  * Goal: 将字符串转化为整数,自己不懂得地方在于如何将大于INT.MAX 的值转化为 INT.MAX,将INT.MIN的值化为 INT.MIN
- * 自己想到的解法是用更高精度的数
+ * 自己想到的解法是用更高精度的long来保存
  */
 public class Problem8_atoi {
     public static int myAtoi(String str) {
