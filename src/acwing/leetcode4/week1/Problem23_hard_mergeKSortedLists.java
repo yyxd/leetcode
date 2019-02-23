@@ -1,4 +1,4 @@
-package acwing.leetcode4;
+package acwing.leetcode4.week1;
 /**
  * Created by HinTi on 2018/11/19.
  * Goal: 归并n个有序链表

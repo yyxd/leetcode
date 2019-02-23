@@ -1,4 +1,4 @@
-package acwing.leetcode4;
+package acwing.leetcode4.week1;
 
 import java.util.HashMap;
 
