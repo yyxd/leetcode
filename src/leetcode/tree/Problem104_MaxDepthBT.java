@@ -2,7 +2,7 @@ package leetcode.tree;
 
 /**
  * Created by Diane on 2019/2/9.
- * Goal:
+ * Goal: 求树的最大深度
  */
 public class Problem104_MaxDepthBT {
     public int maxDepth(TreeNode root) {

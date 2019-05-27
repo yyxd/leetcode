@@ -1,4 +1,4 @@
-package acwing.leetcode4;
+package acwing.leetcode4.week1;
 
 /**
  * Created by Diane on 2018/11/14.
