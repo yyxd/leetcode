@@ -5,22 +5,22 @@ package leetcode.cn.interview_problem.string_problem;
  * Goal: 创建trie树
  */
 
-public class Trie {
-    private Trie []children = new Trie[26];
+public class TrieNode {
+    private TrieNode[]children = new TrieNode[26];
     private boolean status = false;
     /** Initialize your data structure here. */
-    public Trie() {
+    public TrieNode() {
 
     }
 
     /** Inserts a word into the trie. */
     public void insert(String word) {
-        Trie curNode = this;
-        Trie nextNode;
+        TrieNode curNode = this;
+        TrieNode nextNode;
         for(int i=0;i<word.length();i++){
             int index = word.charAt(i)-'a';
             if(curNode.children[index]==null)
-                curNode.children[index] = new Trie();
+                curNode.children[index] = new TrieNode();
             nextNode = curNode.children[index];
             curNode = nextNode;
         }
@@ -29,8 +29,8 @@ public class Trie {
 
     /** Returns if the word is in the trie. */
     public boolean search(String word) {
-        Trie curNode = this;
-        Trie nextNode;
+        TrieNode curNode = this;
+        TrieNode nextNode;
         for(int i=0;i<word.length();i++) {
             int index = word.charAt(i) - 'a';
             nextNode = curNode.children[index];
@@ -43,8 +43,8 @@ public class Trie {
 
     /** Returns if there is any word in the trie that starts with the given prefix. */
     public boolean startsWith(String prefix) {
-        Trie curNode = this;
-        Trie nextNode;
+        TrieNode curNode = this;
+        TrieNode nextNode;
         for(int i=0;i<prefix.length();i++) {
             int index = prefix.charAt(i) - 'a';
             nextNode = curNode.children[index];
@@ -56,7 +56,7 @@ public class Trie {
     }
 
     public static void main(String[] args) {
-        Trie trie = new Trie();
+        TrieNode trie = new TrieNode();
         trie.insert("apple");
         System.out.println(trie.search("app"));
         System.out.println(trie.startsWith("app"));

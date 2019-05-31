@@ -1,4 +1,4 @@
-package leetcode.cn.interview_problem;
+package leetcode.cn.interview_problem.string_problem;
 
 import java.util.ArrayList;
 import java.util.List;
