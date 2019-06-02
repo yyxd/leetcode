@@ -3,7 +3,12 @@ import java.util.Map;
 
 /**
  * Created by HinTi on 2019/6/2.
- * Goal:
+ * Goal: 翻转任意列得到行中的每一个数全为0或1的最大行数
+ * 很巧妙的想法，统计现有的每一行的次数，以及与其相反行
+ * 例如001,110，就是一对互补行
+ * 行+互补行的个数，可以通过翻转得到全0 和全 1
+ * 在经过翻转后能够得到一样
+ 反转之后能够
  */
 public class contest139_2 {
     public static int maxEqualRowsAfterFlips(int[][] matrix) {
