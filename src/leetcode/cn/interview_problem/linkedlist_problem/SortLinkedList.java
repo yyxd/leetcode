@@ -1,20 +1,16 @@
-package leetcode.cn.interview_problem.linkedlist;
-
-import leetcode.sort.HeapSort;
-
-import java.util.List;
+package leetcode.cn.interview_problem.linkedlist_problem;
 
 /**
  * Created by HinTi on 2019/7/3.
  * Goal: 使用归并对链表排序
  */
-class ListNode{
-    int val;
-    ListNode next;
-    ListNode(int x){
-        val = x;
-    }
-}
+//class ListNode{
+//    int val;
+//    ListNode next;
+//    ListNode(int x){
+//        val = x;
+//    }
+//}
 public class SortLinkedList {
 
     public ListNode sortList(ListNode head) {

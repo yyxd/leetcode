@@ -1,4 +1,4 @@
-package leetcode.cn.interview_problem.linkedlist;
+package leetcode.cn.interview_problem.linkedlist_problem;
 
 
 /**

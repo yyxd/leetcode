@@ -1,6 +1,4 @@
-package leetcode.cn.interview_problem.linkedlist;
-
-import java.security.InvalidKeyException;
+package leetcode.cn.interview_problem.linkedlist_problem;
 
 /**
  * Created by HinTi on 2019/7/3.
