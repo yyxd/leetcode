@@ -26,7 +26,6 @@ public class Problem2 {
                 int sj = bookingList.get(t).j;
                 int sk = bookingList.get(t).k;
                 if(si>tj) break;
-                if(sj<tj)
             }
         }
         return ans;
@@ -54,7 +53,7 @@ public class Problem2 {
                 {1, 3, 20},
                 {1, 2, 15}
         };
-        corpFlightBookings(bookings, 6);
+//        corpFlightBookings(bookings, 6);
     }
 
 
