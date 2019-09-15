@@ -6,7 +6,7 @@ package leetcode.sort;
  * 但是堆排序不如快排的原因是，交换次数过多
  * 不利于CPU缓存 堆化过程中访问的数组下标是1,2,4,8，而不是像快速排序那样局部顺序访问，对CPU缓存不友好
  */
-public class HeapSort {
+public class  HeapSort {
 
     public void buildHeap(int []a,int n){
         for(int i =n/2;i>=1;i--){
@@ -45,7 +45,7 @@ public class HeapSort {
 
     public static void main(String[] args) {
         HeapSort hs = new HeapSort();
-        int[] a = {0,7,5,19,8,4,1,20,13,16};
+        int[] a = {10,7,5,19,8,4,1,20,13,16};
         hs.buildHeap(a,a.length-1);
         hs.sort(a,a.length-1);
         for(int i:a)
