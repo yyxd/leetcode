@@ -4,31 +4,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Diane on 2019/2/10.
- * Goal: 图的邻接矩阵的表示
+ * Created by HinTi on 2019/9/13.
+ * Goal:
  */
 public class Graph {
-    List<Node> nodes = new ArrayList<>();
+    List<List<Edge>> graph;
 
-    public void insertNode(Node node){
-        nodes.add(node);
+    Graph(int n) {
+        init(n);
     }
 
-    public void addEdge(Edge e){
-        Node v1= e.startNode;
-        v1.edges.add(e);
+    // 初始化n个节点
+    void init(int n) {
+        graph = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            graph.add(new ArrayList<>());
+        }
     }
-}
 
-class Node{
-    String nodeName;//节点名称
-    int val;
-    int count;//节点的入度
-    List<Edge> edges = new ArrayList<>();
-}
+    void addEdge(int i, int j, int val) {
+        graph.get(i).add(new Edge(j, val));
+    }
 
-class Edge{
-    int weight;//边的权重
-    Node startNode;//边的开始节点
-    Node endNode;//边的结束节点
+    void addWuXiangEdge(int i, int j, int val) {
+        graph.get(i).add(new Edge(j, val));
+        graph.get(j).add(new Edge(i, val));
+    }
+
+    int getSize() {
+        return graph.size();
+    }
+
+    // 获取边
+    List<Edge> getEdges(int node) {
+        return graph.get(node);
+    }
 }
