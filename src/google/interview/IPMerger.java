@@ -20,6 +20,11 @@ class TrieNode {
 
     public TrieNode() {
     }
+
+    public TrieNode(TrieNode left, TrieNode right) {
+        this.left = left;
+        this.right = right;
+    }
 }
 
 
