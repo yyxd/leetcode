@@ -1,4 +1,4 @@
-package leetcode.interval;
+package google.interval;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +10,7 @@ import java.util.List;
  * Goal: 航班预订统计
  */
 
-class Interval implements Comparable<Interval> {
+class FlyPoint implements Comparable<FlyPoint> {
 
     int index;
     /*
@@ -21,7 +21,7 @@ class Interval implements Comparable<Interval> {
     int state;//表示进出状态
     int val;
 
-    public Interval(int index, int state, int val) {
+    public FlyPoint(int index, int state, int val) {
         this.index = index;
         this.state = state;
         this.val = val;
@@ -29,7 +29,7 @@ class Interval implements Comparable<Interval> {
 
 
     @Override
-    public int compareTo(Interval o) {
+    public int compareTo(FlyPoint o) {
         if (this.index == o.index)
             return this.state - o.state;
         else
@@ -53,20 +53,20 @@ public class Problem_1109 {
     }
     public static int[] corpFlightBookings(int[][] bookings, int n) {
         int[] ans = new int[n];
-        List<Interval> intervals = new ArrayList<>();
+        List<FlyPoint> flyPoints = new ArrayList<>();
         for (int i = 0; i < bookings.length; i++) {
             int a = bookings[i][0];
             int b = bookings[i][1];
             int v = bookings[i][2];
-            intervals.add(new Interval(a, 1, v));
-            intervals.add(new Interval(b + 1, -1, v));
+            flyPoints.add(new FlyPoint(a, 1, v));
+            flyPoints.add(new FlyPoint(b + 1, -1, v));
         }
-        Collections.sort(intervals);
+        Collections.sort(flyPoints);
         int j = 0;
         int pre = 0;
         for (int i = 1; i <= n; i++) {
-            while (j < intervals.size()) {
-                Interval cur = intervals.get(j);
+            while (j < flyPoints.size()) {
+                FlyPoint cur = flyPoints.get(j);
                 if (cur.index <= i)
                     pre = pre + cur.val * cur.state;
                 else
