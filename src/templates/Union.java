@@ -1,5 +1,7 @@
 package templates;
 
+import java.util.Arrays;
+
 /**
  * Created by Diane on 2019-09-03.
  * Goal:

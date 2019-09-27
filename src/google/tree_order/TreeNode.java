@@ -5,10 +5,10 @@ package google.tree_order;
  * Goal:
  */
 public class TreeNode {
-    int val;
-    char id;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public char id;
+    public TreeNode left;
+    public TreeNode right;
 
     public TreeNode(int val) {
         this.val = val;

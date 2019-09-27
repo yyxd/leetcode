@@ -1,7 +1,7 @@
 package google.tree_order;
 
 import java.util.HashSet;
-import java.util.LinkedList;
+import java.util.Stack;
 
 /**
  * Created by HinTi on 2019/9/16.
@@ -13,11 +13,12 @@ import java.util.LinkedList;
  */
 public class PostOrder {
     public static void postOrder(TreeNode root) {
-        LinkedList<TreeNode> stack = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
         TreeNode cur = root;
         HashSet<TreeNode> visitedSet = new HashSet<>();
         stack.push(cur);
-        while (cur != null || !stack.isEmpty()) {
+        while (!stack.isEmpty()) {
+            cur = stack.peek();
             while (cur != null && !visitedSet.contains(cur)) {
                 visitedSet.add(cur);
                 if (cur.right != null)
@@ -27,7 +28,7 @@ public class PostOrder {
                 cur = cur.left == null ? cur.right : cur.left;
             }
             // poll 为空时返回空 pop 抛出 Exception
-            cur = stack.pollLast();
+            cur = stack.pop();
             if (cur != null)
                 System.out.print(cur.val + " ");
         }
